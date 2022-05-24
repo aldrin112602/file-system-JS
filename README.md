@@ -1,2 +1,2 @@
 # file-system-JS
-File System for client side
+File System for client side browser
