@@ -1,4 +1,5 @@
-# file-system-JS Promised based
+# file-system-JS 
+## Promised based
 File System for client side browser 
 
 ## Common functions
@@ -16,7 +17,17 @@ createFile(content, type, filename);
 
     //Using readFileAsDataURL(file)
     fs.readFileAsDataURL("image.png")
-    .then(res => {
-       console.log(res);  
+    .then(function(data) {
+       console.log(data); //base64 String
     })
+    
+    //Reading <input type="file" id="file">
+    // example:
+    var file = document.getElementById('file');
+    file.onchange = function() {
+      fs.readFileAsDataURL(file.files[0])
+      .then(function(data) {
+         console.log(data); //base64 String
+      })
+    }
 </script>
