@@ -1,5 +1,6 @@
-# file-system-JS
-File System for client side browser
+# file-system-JS Promised based
+File System for client side browser 
+
 ## Common functions
 #### readFileAsDataURL(file);
 #### readFile(file);
