@@ -4,10 +4,10 @@ File System for client side browser
 
 ## Common functions
 ```javascript
-
-readFileAsDataURL(file);
-readFile(file);
-createFile(content, type, filename);
+var fs = new FileSystem();
+fs.readFileAsDataURL(file);
+fs.readFile(file);
+fs.createFile(content, type, filename);
 ```
 # Minimal Example 
 ```html
@@ -29,5 +29,15 @@ createFile(content, type, filename);
       .then(function(data) {
          console.log(data); //base64 String
       })
+
+      }
+
+
+
+    //Want to use async/await function?
+    function async fileData() {
+       var data = await fs.readFileAsDataURL('image.png');
+       return await data;
     }
+     
 </script>
