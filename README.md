@@ -32,12 +32,37 @@ fs.createFile(content, type, filename);
 
       }
 
-
-
     //Want to use async/await function?
     function async fileData() {
        var data = await fs.readFileAsDataURL('image.png');
+       
+       //or Reading file from input
+      //var data = await fs.readFileAsDataURL(file.files[0]);
+      
        return await data;
     }
-     
 </script>
+```
+<br><br>
+Perform <code>readFile(file)</code> function
+```javascript
+    //sample: fs.readFile(file Path)
+    //Reading js file
+    fs.readFile('main.js').then(function(data) {
+      console.log(data)
+    });
+    
+     //Reading text file
+    fs.readFile('sample.txt').then(function(data) {
+      console.log(data)
+    });
+    
+    //You can also use async/await if you want
+    
+    const data = async () => {
+      var res = await fs.readFile('sample.txt');
+      console.log(res)
+      return await res;
+    }
+
+```
