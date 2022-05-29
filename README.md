@@ -66,3 +66,18 @@ Perform <code>readFile(file)</code> function
     }
 
 ```
+
+
+<br>
+Creating file Using <code>fs.createFile(content, type, filename); </code>
+
+```javascript
+
+    //Creating file (.txt, .js, .css, .php, etc...)
+    //fs.createFile(content, type, filename)
+    //Creating text file
+    fs.createFile("Sample Text", 'text/plain', 'sample.txt');
+    
+    //Creating js file
+    fs.createFile('console.log("Hello world"', 'text/javascript', 'main.js');
+```
